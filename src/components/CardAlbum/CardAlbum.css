@@ -1,0 +1,44 @@
+.container-cards {margin-top: 10%;}
+
+.card-album {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;  
+}
+
+.card-album img {
+  border-radius: 4px;
+}
+
+.card-album .card-text {
+  min-height: 70px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.card-album .card-body {
+  height: 140px;
+  margin: auto;
+  padding: 0.85rem;
+}
+
+.card-album .card-text {
+  line-height: 1.5;
+  padding: 4px 0 0 6px;
+}
+
+.card-album .card-body img {
+  width: 80px;
+}
+.border-success,
+.border-primary,
+.border-purple,
+.border-dark {
+  border: 3px solid!important;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 860px) {
+  .container-cards {margin-top: 25%;}
+}
