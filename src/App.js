@@ -8,6 +8,7 @@ import './App.css';
 import { getPhotos } from '../src/utils/Api';
 
 function App() {
+
   const [page, setPage] = useState(1);
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,8 +26,7 @@ function App() {
       const newPhotos = await getPhotos(page);
       setPhotos((prev) => [...prev, ...newPhotos]);
       setLoading(false);
-    };
-
+    }
     loadPhotos();
   }, [page]);
 
@@ -35,7 +35,7 @@ function App() {
       <Header />
       <div className="container container-cards">
         <div className="row" onScroll={handleScroll}>
-          {photos && photos.map((photos) => <CardAlbum key={photos.id} item={photos} />)}
+          {photos && photos.map((item) => <CardAlbum key={item.id} item={item} />)}
         </div>
           {loading && <Loading>Loading ...</Loading>}
       </div>
